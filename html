@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chennai Interactive Map</title>
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Embedded CSS -->
+    <style>
+        .hotspot-text {
+            color: darkblue;
+            font-weight: bold;
+            text-align: center;
+        }
+        .frame-section {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Chennai Map with Hotspots, Frames & Links</h1>
+
+    <!-- Inline CSS Example -->
+    <p style="color: green; text-align: center;">
+        
+    </p>
+
+    <!-- Map with Hotspots -->
+    <div class="map-container">
+        <!-- Replace chennai-map.jpg with your Chennai map image -->
+        <img src="chennai-map.jpg" alt="Chennai Map" usemap="#chennaiMap" width="600" height="400">
+        <map name="chennaiMap">
+            <!-- Hotspot for Marina Beach -->
+            <area shape="rect" coords="100,150,180,200" href="https://en.wikipedia.org/wiki/Marina_Beach" alt="Marina Beach">
+            <!-- Hotspot for Chennai Central Railway Station -->
+            <area shape="rect" coords="250,180,320,230" href="https://en.wikipedia.org/wiki/Chennai_Central" alt="Chennai Central">
+            <!-- Hotspot for Kapaleeshwarar Temple -->
+            <area shape="rect" coords="400,250,470,300" href="https://en.wikipedia.org/wiki/Kapaleeshwarar_Temple" alt="Kapaleeshwarar Temple">
+        </map>
+        <p class="hotspot-text">Click on the highlighted areas to explore Chennai landmarks!</p>
+    </div>
+
+    <!-- Frames Section -->
+    <div class="frame-section">
+        <!-- Embed Google Maps (Chennai) -->
+        <iframe src="https://www.google.com/maps/embed/v1/place?q=Chennai&key=YOUR_API_KEY" width="400" height="300"></iframe>
+        
+        <!-- Embed Wikipedia (Chennai page) -->
+        <iframe src="https://en.wikipedia.org/wiki/Chennai" width="1000" height="500"></iframe>
+    </div>
+
+    <!-- Navigation Links -->
+    <div style="text-align:center; margin-top:20px;">
+        <a href="#top">Back to Top</a> |
+        <a href="https://www.chennai.tn.gov.in" target="_blank">Official Chennai Website</a>
+    </div>
+</body>
+</html>
+
