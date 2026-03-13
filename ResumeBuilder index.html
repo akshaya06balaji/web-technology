@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ResumeCraft – Free Resume Builder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="top-header">
+  <h1>Phoenix 🐦‍🔥</h1>
+</header>
+
+<!-- ================= DASHBOARD ================= -->
+<section id="dashboard" class="dashboard">
+  <div class="dashboard-content">
+    <h2>Build your professional resume</h2>
+    <button id="buildBtn">🚀 Build a Resume</button>
+  </div>
+</section>
+
+<!-- ================= BUILDER ================= -->
+<section id="builder" hidden>
+
+  <button id="backBtn" class="back-btn">← Back to Dashboard</button>
+
+  <button id="darkToggle" class="dark-toggle">🌙 Dark Mode</button>
+
+  <main class="container">
+
+    <!-- ========== FORM ========== -->
+    <form class="form" autocomplete="off">
+
+      <h3>Resume Details</h3>
+
+      <label>Name</label>
+      <input type="text" id="name" placeholder="Your Name" required />
+
+      <label>Email</label>
+      <input type="email" id="email" placeholder="Email" required />
+
+      <label>Phone</label>
+      <input type="text" id="phone" placeholder="Phone" required />
+
+      <label>Skills</label>
+      <textarea id="skills" placeholder="Skills (comma separated)" required></textarea>
+
+      <label>Education</label>
+      <textarea id="education" placeholder="Education" required></textarea>
+
+      <label>Experience</label>
+      <textarea id="experience" placeholder="Experience" required></textarea>
+
+      <label>Projects</label>
+      <textarea id="projects" placeholder="One project per line" required></textarea>
+
+      <label>Professional Summary</label>
+      <textarea id="summary" required></textarea>
+
+      <label>Template</label>
+      <select id="templateSelect">
+        <option value="template-one">Classic</option>
+        <option value="template-two">Modern</option>
+        <option value="template-three">Minimal</option>
+      </select>
+
+      <button type="button" id="downloadBtn">Download Resume</button>
+    </form>
+
+    <!-- ========== PREVIEW ========== -->
+    <article class="preview template-one" id="resume">
+
+      <header class="header">
+        <h2>👤 <span id="pname">Your Name</span></h2>
+        <p>
+          📧 <span id="pemail">email@example.com</span> |
+          📞 <span id="pphone">9999999999</span>
+        </p>
+      </header>
+
+      <section class="section">
+        <h3>🧠 Skills</h3>
+        <ul id="pskills"></ul>
+      </section>
+
+      <section class="section">
+        <h3>🎓 Education</h3>
+        <p id="pedu"></p>
+      </section>
+
+      <section class="section">
+        <h3>💼 Experience</h3>
+        <p id="pexp"></p>
+      </section>
+
+      <section class="section">
+        <h3>🛠 Projects</h3>
+        <ul id="pprojects"></ul>
+      </section>
+
+      <section class="section">
+        <h3>✨ Summary</h3>
+        <p id="psummary"></p>
+      </section>
+
+    </article>
+
+  </main>
+</section>
+
+<!-- ================= SCRIPTS ================= -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
