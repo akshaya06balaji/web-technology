@@ -1,0 +1,252 @@
+/* =======================
+   Global Reset
+======================= */
+{
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* =======================
+   Theme Variables
+======================= */
+:root {
+  --bg: #f9fafb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --border: #d1d5db;
+  --primary: #2563eb;
+}
+
+.dark-mode {
+  --bg: #111827;
+  --card: #1f2937;
+  --text: #f9fafb;
+  --border: #374151;
+  --primary: #3b82f6;
+}
+
+/* =======================
+   Inputs
+======================= */
+input,
+textarea,
+select {
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+/* =======================
+   Layout
+======================= */
+.container {
+  display: flex;
+  gap: 24px;
+  padding: 24px;
+}
+
+/* =======================
+   Cards
+======================= */
+.form,
+.preview {
+  background: var(--card);
+  border-radius: 8px;
+}
+
+/* =======================
+   Form
+======================= */
+.form {
+  width: 40%;
+}
+
+.form input,
+.form textarea,
+.form select {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.form input:focus,
+.form textarea:focus,
+.form select:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+/* =======================
+   Buttons
+======================= */
+button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* =======================
+   Resume Preview
+======================= */
+.preview {
+  width: 60%;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+/* =======================
+   Resume Header
+======================= */
+.header {
+  text-align: center;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 10px;
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+/* =======================
+   Resume Sections
+======================= */
+.section {
+  margin-top: 20px;
+}
+
+.section h3 {
+  font-size: 14px;
+  letter-spacing: 1px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+}
+
+/* =======================
+   Lists
+======================= */
+ul {
+  padding-left: 18px;
+}
+
+li {
+  margin-bottom: 4px;
+}
+
+/* =======================
+   A4 Print Size
+======================= */
+#resume {
+  width: 210mm;
+  min-height: 297mm;
+  padding: 20mm;
+  margin: auto;
+}
+
+/* =======================
+   Responsive
+======================= */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .form,
+  .preview {
+    width: 100%;
+  }
+}
+
+/* =======================
+   Dashboard
+======================= */
+.dashboard {
+  height: calc(100vh - 70px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated gradient */
+.dashboard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    #2563eb,
+    #9333ea,
+    #0ea5e9
+  );
+  background-size: 300% 300%;
+  animation: gradientMove 10s ease infinite;
+  z-index: -1;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.dashboard-content {
+  text-align: center;
+  color: white;
+}
+
+.dashboard-content h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.dashboard-content button {
+  background: white;
+  color: #2563eb;
+  padding: 14px 28px;
+  font-size: 16px;
+  border-radius: 30px;
+  border: none;
+}
+
+.dashboard-content button:hover {
+  transform: scale(1.05);
+}
+
+/* =======================
+   Templates (SAFE)
+======================= */
+.template-one {
+  font-family: Arial, sans-serif;
+}
+
+.template-two {
+  font-family: "Segoe UI", sans-serif;
+}
+
+.template-three {
+  font-family: "Times New Roman", serif;
+}
