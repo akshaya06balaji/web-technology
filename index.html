@@ -1,0 +1,11 @@
+<h2>Bank</h2>
+<p id="bal">1000</p>
+<input id="amt">
+<button onclick="dep()">Deposit</button>
+<script>
+let bal=1000;
+function dep(){
+bal+=parseInt(document.getElementById("amt").value);
+document.getElementById("bal").innerText=bal;
+}
+</script>
